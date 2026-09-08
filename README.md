@@ -37,26 +37,13 @@ git push -u github main --force
 git push -u origin main --force
 ```
 
-## 部署成长期网址（推荐 Vercel）
+## 公开网址
 
-Next.js 用 Vercel 最省事，部署成功后会得到可长期转发的 `*.vercel.app` 链接。
+`main` 推送到 GitHub 后，Actions 会发布 GitHub Pages：
 
-1. 打开 [vercel.com](https://vercel.com) ，用 **同一个 GitHub 账号** 登录。
-2. 点 **Add New… → Project**。
-3. **Import** 刚建好的 GitHub 仓库。
-4. 框架会识别为 Next.js。不要改 Root Directory。环境变量不用填。
-5. 点 **Deploy**，等 1–2 分钟。
-6. 完成后把 **Visit** 上的地址（如 `https://cursor-growth-report.vercel.app`）发给别人即可。
+**https://mango9711.github.io/cursor-growth-report/**
 
-之后你每次往 GitHub 的 `main` 推送，Vercel 会自动重新发布。
-
-### 可选：自定义域名
-
-在 Vercel 项目 **Settings → Domains** 里添加你的域名，按提示配 DNS 即可。
-
-## 备选：GitHub Pages
-
-没有 Vercel 账号时，也可以用 GitHub Pages，但要改成静态导出，步骤比 Vercel 多。需要的话可以说一声再改配置。
+也可再用 Vercel：打开 [vercel.com](https://vercel.com)，用 GitHub 账号 Import 本仓库后 Deploy，得到 `*.vercel.app`。
 
 ## 报告里有什么
 
