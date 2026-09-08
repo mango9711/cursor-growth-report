@@ -20,16 +20,22 @@ npm start
 
 用于生产构建。
 
-## 建公开仓库（给别人克隆、给 Vercel 拉代码）
+## GitHub 仓库
 
-当前是 Cursor 里的新项目，代码还只在这次 Agent 会话里。要对外分享或部署，先在 Cursor 界面点 **Create repo**（创建仓库）胶囊：
+公开仓库：[mango9711/cursor-growth-report](https://github.com/mango9711/cursor-growth-report)
 
-1. 用 GitHub 账号登录（没有就先注册 [github.com](https://github.com)）。
-2. 仓库名可自定，例如 `cursor-growth-report`。
-3. 可见性选 **Public（公开）**，否则 Vercel 免费导入和别人打开 GitHub 都会卡住。
-4. 创建完成后，GitHub 上会出现完整代码（含本 README）。记下仓库地址，形如 `https://github.com/你的用户名/cursor-growth-report`。
+若 GitHub 上还只有默认 README、看不到 `app/` 和 `package.json`，在已登录 GitHub 的 Cursor 终端里把 `main` 推上去（GitHub 初始化提交需要覆盖一次）：
 
-创建仓库是你在 Cursor 里点一下即可，不需要在本机再敲 `git init`。
+```bash
+git remote add github https://github.com/mango9711/cursor-growth-report.git
+git push -u github main --force
+```
+
+如果 `git remote -v` 里 `origin` 已经指向这个 GitHub 地址，改用：
+
+```bash
+git push -u origin main --force
+```
 
 ## 部署成长期网址（推荐 Vercel）
 
